@@ -1,7 +1,7 @@
 {
   "name": "import_issues",
   "version": "1.0.0",
-  "main": "import_issues.js",
+  "main": "export_issues.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
