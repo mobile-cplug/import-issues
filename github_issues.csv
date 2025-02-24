@@ -1,0 +1,135 @@
+title,description,due_date,milestone
+Análise de Consumo de Memória,"Evidencia: 
+
+Tela estava travada, só desfixando no Android. Apareceu essas msg antes de encerrar a aplicaçao. Isso acontece diariamente, logs exportados agora
+
+Razão Social: ELM MERCADO AUTONOMO LTDA
+Nome Fantasia: IVELAT - PARQUE DAS NAÇÕES
+Schema: 106712
+Login Code: ELM
+CNPJ: 44468871000100
+
+Logs: [Firebase](https://console.firebase.google.com/u/0/project/autoatendimento-v2/storage/autoatendimento-v2.firebasestorage.app/files/~2Fu106712_1~2Fapp_4~2F2025-02-19T09:29:28)
+
+<img src=""https://github.com/user-attachments/assets/76a44cf9-bdf0-4cf3-b554-063fa1d942a6"" width=50% height=50%>
+
+<img src=""https://github.com/user-attachments/assets/1e5c6064-fe13-4127-a80a-fbd0928eb360"" width=50% height=50%>",,
+[Totem v2] Time-out para a impressão da Nota,"Caso a flag setting[invoiceByEmail] esteja ativada
+
+Adicionar time-out para interação da impressão, ou não, da nota fiscal (Máx 1 minuto)
+
+Se nenhuma interação -> Não imprimir
+
+Hoje ele fica nessa tela até algum usuário clicar em ""Não obrigado"" ou imprimir a nota. 
+
+![Image](https://github.com/user-attachments/assets/beb9ee56-089b-4f49-aa00-a8289a89071e)",,
+[TOTEM V2] - Features para depreciar o V1,,,
+Rotina de verificação de conexão periódica do CPserver,"> @eijiimaeda Notei que ao fechar o CPServer o app continua mostrando ""Conectado"" 
+> 
+> talvez seja interessante uma rotina de verificação de conexão periódica e caso desconecte redirecione para a tela de busca de IP
+> 
+> https://drive.google.com/file/d/10ONY_wz9N3PKcGNX8_bOs8tfq_x5MrjB/view?usp=drive_link 
+
+ _Originally posted by @Jcezar-js in [#508](https://github.com/mobile-cplug/apps-v2/issues/508#issuecomment-2633748411)_
+
+
+**Sugestão:** Fazer uma funcão de ping para toda vez que abrir a tela de conexão testar se a conexão ainda é válida",,
+[PDV Cielo/Stone] Gerar o número da venda no servidor offline,"Não há opção para gerar o número da venda no servidor offline, acredito que somente na Cielo. Ocasiona na duplicidade de numeração com o PDV caso estejam em comunicação.
+
+![image](https://github.com/user-attachments/assets/9e883fc4-9e1a-4022-844f-a5f2f3cc2bf3)",,
+[PDV Cielo/Stone] Layout da impressão,"Vamos adicionar Negrito nessas marcações aqui (Na primeira marcação pode adicionar na sessão inteira)
+![Image](https://github.com/user-attachments/assets/d77b6001-1af5-4ddf-9e43-d0ff3f977740)
+
+Podemos seguir esse template de exemplo pro relatório gerencial
+![Image](https://github.com/user-attachments/assets/2b8c8cac-db85-444f-b9b0-0242febee1d4)
+
+E este para NFCe
+![Image](https://github.com/user-attachments/assets/1e0ec858-fa8a-4195-9c66-f47b79999e89)
+
+
+Impressão do tipo Combo não agrupa os componentes - Resorvido
+Remover o espaçamento acima do QRcode na impressão de NFCe da cielo
+![Image](https://github.com/user-attachments/assets/f7b8171c-8ad2-4b01-a376-361f2d285df9)",,
+[PDV Cielo/Stone] Impressão em rede,"O PDV não consegue redirecionar a impressão de pedido/ficha de consumo para impressora externa.
+
+-> Mesmo comunicando com CPServer e http ativo.
+-> Marcada a opção ""Gerar venda no servidor offilne""
+
+
+
+@patrickcplug Pensei sobre a conversa do PDI do cadastro, e acredito que possamos manter as impressões do relatório gerencial /  nota na POS mesmo, sem necessidade de incluir o PDI do ERP.",,
+[PDV Cielo/Stone] Tela de loading infinito ao tentar gerar nota fiscal.,"-> Ao vincular servidor offilne (Mesmo com Http ativo), a venda não gera nota e não retorna erro ou timeout, precisando reiniciar a maquininha, mesmo com contingência ativa também.
+
+-> Não é enviada a venda para o ERP (Nem com envio de registors pelo background ativo), só consegui enviar se retirar o servidor offline e enviar os registros manualmente. 
+
+https://drive.google.com/file/d/1v_OiR6K6QaRk_c6fV7RVT98xyb3xMvUi/view?usp=drive_link",,
+[PagSeguro - Bling POS] - timeout ao tentar iniciar transação,"Mesmo desinstalando e limpando a POS do Firebase e refazendo o vínculo, o problema persiste.
+
+Aparentemente somente nessas POS.
+
+Serial: PB3S249F73356  
+Serial: PB3S249D76413  
+Serial: PB3S249D76746  
+
+https://drive.google.com/file/d/1VEQpQZDGryAnlj71rHikfIVhgi1NnVBA/view?usp=drive_link",,
+[PDV Cielo/Stone] Ajustar Exportação de Logs,"O arquivo gerado para o josé chega corrompido e não é possível a visualização.
+
+Necessário ajuste para identificação de problemas simples",,
+[Smart POS ~ Bling POS] Criar rotina de limpeza de transações canceladas / telemetria,"Algumas Smart POS caem nesse cenário aqui e não conseguem transacionar até a exclusão manual da transação e telemetria.
+
+Retorna ""POS Ocupada"" quando tenta transacionar nesse cenário
+
+![Image](https://github.com/user-attachments/assets/8a6d99e1-b4c2-488f-a6a6-4f22c6a7a6fa)",,
+Implementação Smart POS Sicred - Bling POS,"@patrickcplug
+Não está sendo possível transações via chip
+https://drive.google.com/file/d/1rnaSma64xoCVTWSE07om9r3sa2rxDwze/view?usp=drive_link
+
+DOC: https://dev.softwareexpress.com.br/docs/smart-terminal/android-restricao-tls#cen%C3%A1rio-clisitef
+
+E Além disso, ao final da venda parece está ocorrendo tela branca
+
+![Image](https://github.com/user-attachments/assets/efc180e2-2880-4f7e-b896-b7faf603d798)",,
+Senha para Estorno no Cplug Pay,"Criar modo ""bloqueado"" para quando for utilizar no totem.
+
+Solicitar user e senha para acessar a aba de configurações somente se vinculado ao totem.
+
+Assim evitamos do usuário mal intencionado acabar mexendo nas configurações indevidamente",,
+Ajustes PDV android Stone/Cielo,"- [x] Botão de ""Receber valor total não funciona
+- [x] Impressão do Fechamento de caixa não sai automáticamente, precisa clicar em ""Reimprimir""
+- [x] (Caso incerto) Houveram relatos na 1.4.16 de impressões de ficha de consumo apresentando esse retorno: 
+
+![image](https://github.com/user-attachments/assets/e8a8fe8a-9f3b-481f-adb0-2a00f70c0357)",,
+[Atendimento | Stone  e Cielo] - Features faltantes,Centralizando as issues de atendimento aqui,,
+PDV POS - Exibição de valores,"Ao utilizarmos o POS da PagSeguro os valores apresentados no visor estão gerando uma dificuldade na interpretação dos valores a serem pagos.
+Quando utilizado o Tipo de pagamento como Emissor apresenta o valor sem juros duas vezes e uma vez com juros.
+Quando utilizado Lojista apresenta três vezes o mesmo valor no visor.
+Poderiam analisar a viabilidade de melhorarmos a exibição desses valores? Pois, alguns sellers relatam que o consumidor final fica com dúvidas de qual será o valor cobrado no momento do pagamento devido essa duplicação.
+Talvez uma sugestão seria removermos a informação onde destacamos com um x.
+
+![Image](https://github.com/user-attachments/assets/092aadaf-11a7-4084-a2f8-25b41fd79b63)
+
+![Image](https://github.com/user-attachments/assets/3cd6f16f-c7d1-4407-983a-a809e073f2c8)",,
+Atendimento POS Stone - Impressões não funcionam na POS,"As impressões de relatório gerencial e nota fiscal não estão saindo na POS, usando o atendimento de mesas.
+
+As impressões de pedido de preparo não obedecem a impressora configurada, saem na impressora do caixa.
+
+## Referência para implementação
+
+https://gist.github.com/patrickcplug/7ebdc6d81cf48ac543812daf0bba2676
+https://gist.github.com/patrickcplug/e44ed2bc56a560e01d1122e92e94c109
+https://gist.github.com/patrickcplug/c9b6f84b400b9e5350a90a6ddcc03102
+
+https://sdkandroid.stone.com.br/reference/provedor-impressao-pos",,
+chore: adicionar testes em app de atendimento,,,
+Puxar autorização sumup ERP,- Endpoint: `app/integrations/access-token/sumup`,,
+"Bling POS - homologação fiserv(bin, sicred e caixa)","WIFI: 
+`2024-08-14 21:45:27.595  3672-3672  teste                   br.com.softwareexpress.msitef.d6     D  initParameters: Bundle[{acessibilidadeVisual=0, modalidade=2, restricoes=TransacoesHabilitadas=16, isDoubleValidation=0, empresaSitef=TFIOFB1D, CNPJ_CPF=04962772000165, operador=0001, cnpj_automacao=22423374000152, data=20240814, hora=214526, clsit={""CliSiTef"":{},""Geral"":{""TransacoesAdicionaisHabilitadas"":""28""}}, valor=200, numeroCupom=555121723682726, comExterna=1, IMPRIMIR_COMPROVANTE=true, enderecoSitef=binpos.softwareexpress.com.br:443, timeoutColeta=30}]`
+
+
+lyra:
+`2024-08-14 21:46:45.926  3755-3755  teste                   br.com.softwareexpress.msitef.d6     D  initParameters: Bundle[{acessibilidadeVisual=0, modalidade=2, restricoes=TransacoesHabilitadas=16, isDoubleValidation=0, empresaSitef=TFIOFB1D, CNPJ_CPF=04962772000165, operador=0001, cnpj_automacao=22423374000152, data=20240814, hora=214645, clsit={""CliSiTef"":{},""Geral"":{""TransacoesAdicionaisHabilitadas"":""28""}}, valor=200, numeroCupom=112301723682805, comExterna=1, IMPRIMIR_COMPROVANTE=true, enderecoSitef=192.168.102.1:33137, timeoutColeta=30}]`
+
+Algar:
+`2024-08-14 21:47:38.807  3940-3940  teste                   pid-3940                             D  initParameters: Bundle[{acessibilidadeVisual=0, modalidade=2, restricoes=TransacoesHabilitadas=16, isDoubleValidation=0, empresaSitef=TFIOFB1D, CNPJ_CPF=04962772000165, operador=0001, cnpj_automacao=22423374000152, data=20240814, hora=214738, clsit={""CliSiTef"":{},""Geral"":{""TransacoesAdicionaisHabilitadas"":""28""}}, valor=2000, numeroCupom=9278881723682858, comExterna=1, IMPRIMIR_COMPROVANTE=true, enderecoSitef=APN:FDB.ALGAR.BR;172.25.42.233:17023, timeoutColeta=30}]
+2024-08-14 21:47:38.827  3940-3940  System.err              pid-3940                             W  java.lang.IllegalArgumentException: Campo enderecoSitef inválido`",,
+Atualizar lib para bin/sicredi/caixa,O time da fiserv pediu para atualizar a lib antes de seguir com a homologação do app,,
